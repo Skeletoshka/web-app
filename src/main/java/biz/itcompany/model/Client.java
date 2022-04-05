@@ -1,79 +1,80 @@
 package biz.itcompany.model;
 
-import jdk.jfr.Description;
-
-import javax.persistence.Column;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Table(name = "client")
+@Entity
+@Table(name = "client", schema = "dbo")
 public class Client {
+
+    public Client() {
+    }
 
     @Id
     @Column(name = "client_id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer clientId;
 
     @Column(name = "client_companyname", nullable = false)
     @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
     @Size(max=30, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
-    private Integer clientCompanyName;
+    private String clientCompanyName;
 
     @Column(name = "client_city")
     @NotNull(message = "Поле \"Город компании\" не может быть пустым")
     @Size(max=20, message = "Поле \"Город компании\" не может содержать больше {max} символов")
-    private Integer clientCity;
+    private String clientCity;
 
     @Column(name = "client_street")
     @NotNull(message = "Поле \"Улица компании\" не может быть пустым")
     @Size(max=30, message = "Поле \"Улица компании\" не может содержать больше {max} символов")
-    private Integer clientTown;
+    private String clientStreet;
 
     @Column(name = "client_house")
     @NotNull(message = "Поле \"Дом компании\" не может быть пустым")
     @Size(max=5, message = "Поле \"Дом компании\" не может содержать больше {max} символов")
-    private Integer clientHouse;
+    private String clientHouse;
 
     @Column(name = "client_phonenumber")
     @NotNull(message = "Поле \"Телефон компании\" не может быть пустым")
     @Size(max=11, message = "Поле \"Телефон компании\" не может содержать больше {max} символов")
-    private Integer clientPhoneNumber;
+    private String clientPhoneNumber;
 
     @Column(name = "client_email")
     @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
     @Size(max=30, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
-    private Integer clientEmail;
+    private String clientEmail;
 
     @Column(name = "client_lastname")
     @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
     @Size(max=20, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
-    private Integer clientLastName;
+    private String clientLastName;
 
     @Column(name = "client_name")
     @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
     @Size(max=20, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
-    private Integer clientName;
+    private String clientName;
 
     @Column(name = "client_middlename")
     @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
     @Size(max=20, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
-    private Integer clientMiddleName;
+    private String clientMiddleName;
 
     public Client(Integer clientId,
-                  Integer clientCompanyName,
-                  Integer clientCity,
-                  Integer clientTown,
-                  Integer clientHouse,
-                  Integer clientPhoneNumber,
-                  Integer clientEmail,
-                  Integer clientLastName,
-                  Integer clientName,
-                  Integer clientMiddleName) {
+                  String clientCompanyName,
+                  String clientCity,
+                  String clientStreet,
+                  String clientHouse,
+                  String clientPhoneNumber,
+                  String clientEmail,
+                  String clientLastName,
+                  String clientName,
+                  String clientMiddleName) {
         this.clientId = clientId;
         this.clientCompanyName = clientCompanyName;
         this.clientCity = clientCity;
-        this.clientTown = clientTown;
+        this.clientStreet = clientStreet;
         this.clientHouse = clientHouse;
         this.clientPhoneNumber = clientPhoneNumber;
         this.clientEmail = clientEmail;
@@ -90,75 +91,75 @@ public class Client {
         this.clientId = clientId;
     }
 
-    public Integer getClientCompanyName() {
+    public String getClientCompanyName() {
         return clientCompanyName;
     }
 
-    public void setClientCompanyName(Integer clientCompanyName) {
+    public void setClientCompanyName(String clientCompanyName) {
         this.clientCompanyName = clientCompanyName;
     }
 
-    public Integer getClientCity() {
+    public String getClientCity() {
         return clientCity;
     }
 
-    public void setClientCity(Integer clientCity) {
+    public void setClientCity(String clientCity) {
         this.clientCity = clientCity;
     }
 
-    public Integer getClientTown() {
-        return clientTown;
+    public String getClientStreet() {
+        return clientStreet;
     }
 
-    public void setClientTown(Integer clientTown) {
-        this.clientTown = clientTown;
+    public void setClientStreet(String clientStreet) {
+        this.clientStreet = clientStreet;
     }
 
-    public Integer getClientHouse() {
+    public String getClientHouse() {
         return clientHouse;
     }
 
-    public void setClientHouse(Integer clientHouse) {
+    public void setClientHouse(String clientHouse) {
         this.clientHouse = clientHouse;
     }
 
-    public Integer getClientPhoneNumber() {
+    public String getClientPhoneNumber() {
         return clientPhoneNumber;
     }
 
-    public void setClientPhoneNumber(Integer clientPhoneNumber) {
+    public void setClientPhoneNumber(String clientPhoneNumber) {
         this.clientPhoneNumber = clientPhoneNumber;
     }
 
-    public Integer getClientEmail() {
+    public String getClientEmail() {
         return clientEmail;
     }
 
-    public void setClientEmail(Integer clientEmail) {
+    public void setClientEmail(String clientEmail) {
         this.clientEmail = clientEmail;
     }
 
-    public Integer getClientLastName() {
+    public String getClientLastName() {
         return clientLastName;
     }
 
-    public void setClientLastName(Integer clientLastName) {
+    public void setClientLastName(String clientLastName) {
         this.clientLastName = clientLastName;
     }
 
-    public Integer getClientName() {
+    public String getClientName() {
         return clientName;
     }
 
-    public void setClientName(Integer clientName) {
+    public void setClientName(String clientName) {
         this.clientName = clientName;
     }
 
-    public Integer getClientMiddleName() {
+    public String getClientMiddleName() {
         return clientMiddleName;
     }
 
-    public void setClientMiddleName(Integer clientMiddleName) {
+    public void setClientMiddleName(String clientMiddleName) {
         this.clientMiddleName = clientMiddleName;
     }
 }

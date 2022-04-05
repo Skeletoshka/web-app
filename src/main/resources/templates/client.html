@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список клиентов</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <td>ID клиента</td>
+        <td>Имя клиента</td>
+        <td>Город клиента</td>
+        <td>Улица клиента</td>
+        <td>Дома клиента</td>
+        <td>Номер клиента</td>
+        <td>e-mail клиента</td>
+        <td>Фамилия клиента</td>
+        <td>Имя клиента</td>
+        <td>Отчество клиента</td>
+    </tr>
+    <tr th:each = "client : ${listClient}">
+        <td th:utext="${client.clientId}"></td>
+        <td th:utext="${client.clientCompanyName}"></td>
+        <td th:utext="${client.clientCity}"></td>
+        <td th:utext="${client.clientStreet}"></td>
+        <td th:utext="${client.clientHouse}"></td>
+        <td th:utext="${client.clientPhoneNumber}"></td>
+        <td th:utext="${client.clientEmail}"></td>
+        <td th:utext="${client.clientLastName}"></td>
+        <td th:utext="${client.clientName}"></td>
+        <td th:utext="${client.clientMiddleName}"></td>
+    </tr>
+</table>
+</body>
+</html>
