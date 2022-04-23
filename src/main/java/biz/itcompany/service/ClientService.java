@@ -20,4 +20,12 @@ public class ClientService {
     public Client get(Integer id){
         return clientRepository.findById(id).get();
     }
+
+    public void save(Client client){
+        clientRepository.save(client);
+    }
+
+    public void delete(Integer id){
+        clientRepository.deleteById(id);
+    }
 }
