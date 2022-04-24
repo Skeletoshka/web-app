@@ -28,9 +28,9 @@ public class PostController {
 
     @PutMapping("/update")
     @CrossOrigin
-    public Post updateClient(@RequestBody Post client) {
-        postService.save(client);
-        return client;
+    public Post updateClient(@RequestBody Post post) {
+        postService.save(post);
+        return post;
     }
 
     @DeleteMapping("/delete")
