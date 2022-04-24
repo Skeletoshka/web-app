@@ -28,14 +28,14 @@ public class ProjectStatusController {
 
     @PutMapping("/update")
     @CrossOrigin
-    public ProjectStatus updateClient(@RequestBody ProjectStatus projectStatus) {
+    public ProjectStatus update(@RequestBody ProjectStatus projectStatus) {
         projectStatusService.save(projectStatus);
         return projectStatus;
     }
 
     @DeleteMapping("/delete")
     @CrossOrigin
-    public void deleteClient(@RequestBody String id) {
+    public void delete(@RequestBody String id) {
         projectStatusService.deleteById(Integer.parseInt(id));
     }
 }

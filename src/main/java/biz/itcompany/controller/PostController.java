@@ -28,14 +28,14 @@ public class PostController {
 
     @PutMapping("/update")
     @CrossOrigin
-    public Post updateClient(@RequestBody Post post) {
+    public Post update(@RequestBody Post post) {
         postService.save(post);
         return post;
     }
 
     @DeleteMapping("/delete")
     @CrossOrigin
-    public void deleteClient(@RequestBody String id) {
+    public void delete(@RequestBody String id) {
         postService.deleteById(Integer.parseInt(id));
     }
 
