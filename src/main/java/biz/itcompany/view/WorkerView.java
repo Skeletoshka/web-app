@@ -1,7 +1,6 @@
 package biz.itcompany.view;
 
 import javax.persistence.Column;
-import javax.persistence.GenerationType;
 import java.util.Date;
 
 public class WorkerView {

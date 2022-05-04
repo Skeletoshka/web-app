@@ -42,23 +42,23 @@ public class Client {
     private String clientPhoneNumber;
 
     @Column(name = "client_email")
-    @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
-    @Size(max=30, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
+    @NotNull(message = "Поле \"E-mail сотрудника\" не может быть пустым")
+    @Size(max=30, message = "Поле \"E-mail сотрудника\" не может содержать больше {max} символов")
     private String clientEmail;
 
     @Column(name = "client_lastname")
-    @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
-    @Size(max=20, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
+    @NotNull(message = "Поле \"Фамилия клиента\" не может быть пустым")
+    @Size(max=20, message = "Поле \"Фамилия клиента\" не может содержать больше {max} символов")
     private String clientLastName;
 
     @Column(name = "client_name")
-    @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
-    @Size(max=20, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
+    @NotNull(message = "Поле \"Имя клиента\" не может быть пустым")
+    @Size(max=20, message = "Поле \"Имя клиента\" не может содержать больше {max} символов")
     private String clientName;
 
     @Column(name = "client_middlename")
-    @NotNull(message = "Поле \"Имя компании\" не может быть пустым")
-    @Size(max=20, message = "Поле \"Имя компании\" не может содержать больше {max} символов")
+    @NotNull(message = "Поле \"Отчество клиента\" не может быть пустым")
+    @Size(max=20, message = "Поле \"Отчество клиента\" не может содержать больше {max} символов")
     private String clientMiddleName;
 
     public Client(Integer clientId,
