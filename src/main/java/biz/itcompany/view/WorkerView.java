@@ -35,7 +35,7 @@ public class WorkerView {
     @Column(name = "worker_password")
     private String workerPassword;
 
-    @Column(name = "post")
+    @Column(name = "post_name")
     private String postName;
 
     public WorkerView() {
