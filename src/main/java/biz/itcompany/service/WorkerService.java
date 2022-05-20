@@ -55,6 +55,6 @@ public class WorkerService {
     }
 
     public void deleteById(Integer id){
-        postRepository.deleteById(id);
+        workerRepository.deleteById(id);
     }
 }

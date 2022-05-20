@@ -63,7 +63,8 @@ public class Worker {
                   Integer workerSalary,
                   Integer postId,
                   Date workerBirthday,
-                  Date workerDateStartJob, Date workerDateEndJob,
+                  Date workerDateStartJob,
+                  Date workerDateEndJob,
                   String workerPassword) {
         this.workerId = workerId;
         this.workerLastName = workerLastName;
