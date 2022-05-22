@@ -59,6 +59,15 @@ public class ContractClientView {
     @Column(name = "company_phonenumber")
     private String companyPhoneNumber;
 
+    @Column(name = "client_lastname")
+    private String clientLastName;
+
+    @Column(name = "client_name")
+    private String clientName;
+
+    @Column(name = "client_middlename")
+    private String clientMiddleName;
+
     public ContractClientView() {
     }
 
@@ -204,5 +213,29 @@ public class ContractClientView {
 
     public void setCompanyPhoneNumber(String companyPhoneNumber) {
         this.companyPhoneNumber = companyPhoneNumber;
+    }
+
+    public String getClientLastName() {
+        return clientLastName;
+    }
+
+    public void setClientLastName(String clientLastName) {
+        this.clientLastName = clientLastName;
+    }
+
+    public String getClientName() {
+        return clientName;
+    }
+
+    public void setClientName(String clientName) {
+        this.clientName = clientName;
+    }
+
+    public String getClientMiddleName() {
+        return clientMiddleName;
+    }
+
+    public void setClientMiddleName(String clientMiddleName) {
+        this.clientMiddleName = clientMiddleName;
     }
 }

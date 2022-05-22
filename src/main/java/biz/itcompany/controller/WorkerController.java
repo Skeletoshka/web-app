@@ -28,9 +28,9 @@ public class WorkerController {
 
     @PutMapping("/update")
     @CrossOrigin
-    public WorkerView update(@RequestBody WorkerView client) {
-        workerService.save(client);
-        return client;
+    public WorkerView update(@RequestBody WorkerView workerView) {
+        workerService.save(workerView);
+        return workerView;
     }
 
     @DeleteMapping("/delete")
